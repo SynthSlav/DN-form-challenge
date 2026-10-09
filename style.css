@@ -1,0 +1,74 @@
+:root {
+    --green-color: RGB(137, 200, 46);
+    --grey-color: RGB(60, 60, 59);
+    --pink-color-hex: #e70064;
+    --font-family: 'Calibri', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: 1px solid black; */
+    font-family: var(--font-family);
+    font-size: 14px;
+}
+
+.form-wraper {
+    border: 4px solid var(--grey-color);
+    background: var(--green-color);
+    width: calc(100% - 32px);
+    max-width: 400px;
+    margin: 48px auto;
+    border-radius: 20px;
+}
+
+#course-form {
+    margin: 20px;
+    margin-top: 40px;
+    width: auto;
+}
+
+.form-group {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 80px minmax(0, 1fr);
+    align-items: center;
+    column-gap: 6px;
+    row-gap: 2px;
+}
+
+.form-group input {
+    width: 100%;
+    min-width: 0;
+}
+
+.error-message {
+    grid-column: 2;
+    min-height: 1em;
+}
+
+.error-message:empty {
+    visibility: hidden;
+}
+
+.submit-button {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+#submitBtn {
+    padding: 4px 16px;
+    border-radius: 5px;
+    border: 2px solid var(--grey-color);
+    background: var(--pink-color-hex)
+}
+
+#submitBtn:hover {
+    opacity: 0.8;
+}
+
+#submitBtn:active {
+    opacity: 1;
+}
